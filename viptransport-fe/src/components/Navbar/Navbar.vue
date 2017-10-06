@@ -36,7 +36,7 @@
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <v-toolbar-items class="hidden-xs-only">
-                <v-btn class="brown--text height" block flat to="/home">Domov</v-btn>
+                <v-btn class="brown--text height" block flat to="/domov">Domov</v-btn>
 
                 <v-btn class="brown--text height" flat>
                     <v-menu class="" offset-y absolute full-width>
@@ -84,7 +84,7 @@ export default {
 
         menuItems() {
             let menuItems = [
-                { icon: 'home', title: 'Domov', link: '/home', subItems: [] },
+                { icon: 'home', title: 'Domov', link: '/domov', subItems: [] },
                 { icon: 'euro_symbol', title: 'Cenník', link: '/cennik', subItems: [] },
                 { icon: 'linked_camera', title: 'Galéria', link: '/galeria', subItems: [] },
                 { icon: 'local_phone', title: 'Kontakt', link: '/kontakt', subItems: [] },
@@ -94,7 +94,7 @@ export default {
         },
         services() {
             let items = [
-                { icon: 'wc', title: 'Svadobná preprava', link: '/svadobna-preprava' },
+                { icon: 'favorite', title: 'Svadobná preprava', link: '/svadobna-preprava' },
                 { icon: 'local_airport', title: 'Letiskové transfery', link: '/letiskove-transfery' },
                 { icon: 'directions_car', title: 'Preprava osôb', link: '/preprava-osob' }
             ];
