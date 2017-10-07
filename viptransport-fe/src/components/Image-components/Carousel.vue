@@ -1,12 +1,16 @@
 <template>
     <v-layout class="mb-4">
         <v-flex xs12>
-            <v-carousel v-if="this.isMobile === false" class="carousel" hide-controls>
-                <v-carousel-item v-for="image in images" :src="image.url" :key="image.id">
+            <v-carousel v-if="this.isTablet" class="carousel-tablet" hide-controls>
+                <v-carousel-item v-for="image in imagesTablet" :src="image.url" :key="image.id">
                 </v-carousel-item>
             </v-carousel>
-            <v-carousel v-else class="carousel-mobile" hide-controls>
+            <v-carousel v-else-if="this.isMobile" class="carousel-mobile" hide-controls>
                 <v-carousel-item v-for="image in imagesMobile" :src="image.url" :key="image.id">
+                </v-carousel-item>
+            </v-carousel>
+            <v-carousel v-else class="carousel" hide-controls>
+                <v-carousel-item v-for="image in images" :src="image.url" :key="image.id">
                 </v-carousel-item>
             </v-carousel>
         </v-flex>
@@ -14,19 +18,23 @@
 </template>
 
 <script>
+var MobileDetect = require('mobile-detect');
+var md = new MobileDetect(window.navigator.userAgent);
+
 export default {
     data: function() {
         return {
             rootMain: '../../static/main-carousel/',
             rootMainMobile: '../../static/main-carousel-mobile/',
+            rootMainMobile: '../../static/main-carousel-tablet/'
         }
     },
     computed: {
         isMobile() {
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                return true;
-            }
-            return false;
+            return md.mobile();
+        },
+        isTablet() {
+            return md.tablet();
         },
         images() {
             let images = [
@@ -41,6 +49,7 @@ export default {
             return images;
         },
         imagesMobile() {
+
             let images = [
                 { id: '2', title: 'Sup', url: this.rootMainMobile + '1.jpg' },
                 { id: '2', title: 'Sup', url: this.rootMainMobile + '2.jpg' },
@@ -50,6 +59,18 @@ export default {
 
             return images;
         },
+        imagesTablet() {
+
+            let images = [
+                { id: '2', title: 'Sup', url: this.rootMainMobile + '1.jpg' },
+                { id: '2', title: 'Sup', url: this.rootMainMobile + '2.jpg' },
+                { id: '2', title: 'Sup', url: this.rootMainMobile + '3.jpg' },
+                { id: '2', title: 'Sup', url: this.rootMainMobile + '4.jpg' },
+                { id: '2', title: 'Sup', url: this.rootMainMobile + '5.jpg' }
+            ];
+
+            return images;
+        }
     }
 }
 </script>
@@ -60,6 +81,10 @@ export default {
 }
 
 .carousel-mobile {
-    height: 300px;
+    height: 350px;
+}
+
+.carousel-tablet {
+    height: 500px;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <v-layout class="mb-4">
-        <v-flex xs12 md6 offset-md3>
+        <v-flex xs12>
             <v-carousel v-if="this.isMobile === false" class="carousel" hide-controls>
                 <v-carousel-item v-for="image in images" :src="image.url" :key="image.id">
                 </v-carousel-item>
@@ -18,7 +18,7 @@ export default {
     data: function() {
         return {
             rootMain: '../../static/wedding-carousel/',
-            rootMainMobile: '../../static/main-carousel-mobile/',
+            rootMainMobile: '../../static/wedding-carousel-mobile/',
         }
     },
     computed: {
@@ -33,25 +33,20 @@ export default {
                 { id: '1', title: 'Sup', url: this.rootMain + '1.jpg' },
                 { id: '2', title: 'Sup', url: this.rootMain + '2.jpg' },
                 { id: '3', title: 'Sup', url: this.rootMain + '3.jpg' },
-                { id: '3', title: 'Sup', url: this.rootMain + '4.jpg' },
-                { id: '3', title: 'Sup', url: this.rootMain + '5.jpg' },
-                { id: '3', title: 'Sup', url: this.rootMain + '6.jpg' },
-                { id: '3', title: 'Sup', url: this.rootMain + '7.jpg' },
-                { id: '3', title: 'Sup', url: this.rootMain + '8.jpg' },
-                { id: '3', title: 'Sup', url: this.rootMain + '9.jpg' },
-                { id: '3', title: 'Sup', url: this.rootMain + '10.jpg' }
+                { id: '4', title: 'Sup', url: this.rootMain + '4.jpg' },
+                { id: '5', title: 'Sup', url: this.rootMain + '5.jpg' },
+                { id: '6', title: 'Sup', url: this.rootMain + '6.jpg' },
+
             ];
         },
         imagesMobile() {
             return [
-                { id: '1', title: 'Sup', url: this.rootMain + '1.jpg' },
-                { id: '2', title: 'Sup', url: this.rootMain + '2.jpg' },
-                { id: '3', title: 'Sup', url: this.rootMain + '3.jpg' },
-                { id: '3', title: 'Sup', url: this.rootMain + '4.jpg' },
-                { id: '3', title: 'Sup', url: this.rootMain + '6.jpg' },
-                { id: '3', title: 'Sup', url: this.rootMain + '8.jpg' },
-                { id: '3', title: 'Sup', url: this.rootMain + '9.jpg' },
-                { id: '3', title: 'Sup', url: this.rootMain + '10.jpg' }
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '1.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '2.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '3.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '4.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '5.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '6.jpg' },
             ];
         },
     }
@@ -60,10 +55,13 @@ export default {
 
 <style scoped>
 .carousel {
+    width: 600px;
     height: 400px;
+    margin: auto;
 }
 
 .carousel-mobile {
     height: 300px;
+    width: 350px;
 }
 </style>

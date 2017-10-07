@@ -24,7 +24,7 @@ export default {
 <style>
 @font-face {
   font-family: r-thin;
-  src: url('./stylus/fonts/Raleway-Thin.ttf');
+  src: url('./stylus/fonts/Raleway-Regular.ttf');
 }
 
 body {
@@ -49,6 +49,10 @@ p {
 
 .btn-stan:hover {
   border: 1px solid #917d61;
+}
+
+.txt-brown{
+  color: #3a311f;
 }
 
 .small {

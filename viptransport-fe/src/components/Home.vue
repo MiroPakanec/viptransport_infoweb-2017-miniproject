@@ -24,46 +24,9 @@
           Profesionálni vodiči spoločnosti sa dokážu prispôsobiť všetkým požiadavkam klienta. Samozrejmosťou je dres code všetkých šoférov, ktorý tvoria čierne nohavice a košela, v prípade požiadavky majú oblečený oblek. Každý zo šoférov ovláda minimálne základy anglického jazyka slovom. Taktiež všetky náležitosti vodiča ako sú psychotesty resp. preukaz vodiča sú samozrejmosťou. </p>
       </v-flex>
     </v-layout>
-    
+
   </v-container>
 </template>
-
-<script>
-export default {
-
-  computed: {
-    isMobile() {
-      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        return true;
-      }
-      return false;
-    },
-    images() {
-      let images = [
-        { id: '2', title: 'Sup', url: '../../static/main-carousel/2.jpg' },
-        { id: '4', title: 'Sup', url: '../../static/main-carousel/4.jpg' },
-        { id: '6', title: 'Sup', url: '../../static/main-carousel/6.jpg' },
-        { id: '8', title: 'Sup', url: '../../static/main-carousel/8.jpg' },
-        { id: '7', title: 'Sup', url: '../../static/main-carousel/7.jpg' },
-        { id: '9', title: 'Sup', url: '../../static/main-carousel/9.jpg' },
-      ];
-
-      return images;
-    },
-    imagesMobile() {
-      let images = [
-        { id: '2', title: 'Sup', url: '../../static/main-carousel-mobile/1.jpg' },
-        { id: '2', title: 'Sup', url: '../../static/main-carousel-mobile/2.jpg' },
-        { id: '2', title: 'Sup', url: '../../static/main-carousel-mobile/3.jpg' },
-        { id: '2', title: 'Sup', url: '../../static/main-carousel-mobile/4.jpg' },
-
-      ];
-
-      return images;
-    },
-  }
-}
-</script>
 
 <style scoped>
 .title {
