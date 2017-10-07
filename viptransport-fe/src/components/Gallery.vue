@@ -1,7 +1,7 @@
 <template>
     <v-container fluid class="brown--text">
         <v-layout row justify-center wrap>
-            <v-flex xs6 md3 lg2 v-for="item in items" :key="item.id">
+            <v-flex xs12 md4 lg3 v-for="item in items" :key="item.id">
                 <app-gallery-img :url="item.url"></app-gallery-img>
             </v-flex>
             <v-spacer></v-spacer>
@@ -24,16 +24,16 @@ export default {
     data: function() {
         return {
             items: [
-                { id: 1, url: '/static/gallery/1.jpg' },
-                { id: 1, url: '/static/gallery/2.jpg' },
-                { id: 1, url: '/static/gallery/3.jpg' },
-                { id: 1, url: '/static/gallery/4.jpg' },
-                { id: 1, url: '/static/gallery/5.jpg' },
-                { id: 1, url: '/static/gallery/6.jpg' },
-                { id: 1, url: '/static/gallery/7.jpg' },
-                { id: 1, url: '/static/gallery/8.jpg' },
-                { id: 1, url: '/static/gallery/9.jpg' },
-                { id: 1, url: '/static/gallery/10.jpg' },
+                { id: 1, url: '/static/gallery/1.png' },
+                { id: 1, url: '/static/gallery/2.png' },
+                { id: 1, url: '/static/gallery/3.png' },
+                { id: 1, url: '/static/gallery/4.png' },
+                { id: 1, url: '/static/gallery/5.png' },
+                { id: 1, url: '/static/gallery/6.png' },
+                { id: 1, url: '/static/gallery/7.png' },
+                { id: 1, url: '/static/gallery/8.png' },
+                { id: 1, url: '/static/gallery/9.png' },
+                { id: 1, url: '/static/gallery/10.png' },
                 { id: 1, url: '/static/gallery/11.jpg' },
                 { id: 1, url: '/static/gallery/12.jpg' },
                 { id: 1, url: '/static/gallery/13.jpg' },
@@ -47,6 +47,8 @@ export default {
                 { id: 1, url: '/static/gallery/21.jpg' },
                 { id: 1, url: '/static/gallery/22.jpg' },
                 { id: 1, url: '/static/gallery/23.jpg' },
+                { id: 1, url: '/static/gallery/24.png' },
+                { id: 1, url: '/static/gallery/25.png' },
             ]
         }
     }

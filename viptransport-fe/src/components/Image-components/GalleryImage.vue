@@ -2,7 +2,7 @@
     <v-layout row class="mt-4">
         <v-flex xs10 offset-xs1>
             <v-card>
-                <v-card-media @click.native.stop="dialog = true" style="cursor:pointer" :src="this.url" height="200px">
+                <v-card-media contain @click.native.stop="dialog = true" style="cursor:pointer" :src="this.url" height="200px">
                 </v-card-media>
             </v-card>
             <v-dialog width="100%" transition="fade-transition" v-model="dialog" lazy absolute>

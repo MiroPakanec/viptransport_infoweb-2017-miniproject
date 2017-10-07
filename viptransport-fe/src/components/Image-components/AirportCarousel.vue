@@ -1,11 +1,11 @@
 <template>
     <v-layout class="mb-4">
         <v-flex xs12>
-            <v-carousel v-if="this.isMobile === false" class="carousel brown--text" hide-controls>
+            <v-carousel interval="15000" v-if="this.isMobile === false" class="carousel brown--text" hide-controls>
                 <v-carousel-item v-for="image in images" :src="image.url" :key="image.id">
                 </v-carousel-item>
             </v-carousel>
-            <v-carousel v-else class="carousel-mobile" hide-controls>
+            <v-carousel interval="15000" v-else class="carousel-mobile" hide-controls>
                 <v-carousel-item v-for="image in imagesMobile" :src="image.url" :key="image.id">
                 </v-carousel-item>
             </v-carousel>
