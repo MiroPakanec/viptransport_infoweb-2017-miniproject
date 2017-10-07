@@ -60,7 +60,7 @@ export default {
                 { title: 'Výlety', icon: 'explore' },
                 { title: 'Dovolenky', icon: 'wb_sunny' },
                 { title: 'Športové podujatia', icon: 'golf_course' },
-                { title: '... a mnoho iných', icon: 'mood' }
+                { title: '...kedykoľvek a kamkoľvek', icon: 'mood' }
 
             ]
         }

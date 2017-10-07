@@ -17,8 +17,8 @@
 export default {
     data: function() {
         return {
-            rootMain: '../../static/wedding-carousel/',
-            rootMainMobile: '../../static/wedding-carousel-mobile/',
+            rootMain: '../../static/wedding-carousel-white/',
+            rootMainMobile: '../../static/wedding-carousel-white-mobile/',
         }
     },
     computed: {
@@ -36,7 +36,6 @@ export default {
                 { id: '4', title: 'Sup', url: this.rootMain + '4.jpg' },
                 { id: '5', title: 'Sup', url: this.rootMain + '5.jpg' },
                 { id: '6', title: 'Sup', url: this.rootMain + '6.jpg' },
-
             ];
         },
         imagesMobile() {

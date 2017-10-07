@@ -1,7 +1,7 @@
 <template>
     <v-layout class="mb-4">
         <v-flex xs12>
-            <v-carousel v-if="this.isMobile === false" class="carousel" hide-controls>
+            <v-carousel v-if="this.isMobile === false" class="carousel brown--text" hide-controls>
                 <v-carousel-item v-for="image in images" :src="image.url" :key="image.id">
                 </v-carousel-item>
             </v-carousel>
@@ -17,8 +17,8 @@
 export default {
     data: function() {
         return {
-            rootMain: '../../static/airport-carousel/',
-            rootMainMobile: '../../static/airport-carousel-mobile/',
+            rootMain: '../../static/airport-carousel-white/',
+            rootMainMobile: '../../static/airport-carousel-white-mobile/',
         }
     },
     computed: {
@@ -47,7 +47,8 @@ export default {
                 { id: '1', title: 'Sup', url: this.rootMainMobile + '3.jpg' },
                 { id: '1', title: 'Sup', url: this.rootMainMobile + '4.jpg' },
                 { id: '1', title: 'Sup', url: this.rootMainMobile + '5.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMainMobile + '6.jpg' }
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '6.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '7.jpg' }
             ];
         },
     }
