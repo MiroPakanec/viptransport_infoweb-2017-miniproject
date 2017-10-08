@@ -18,7 +18,7 @@ export default {
     data: function() {
         return {
             rootMain: '../../static/people-carousel-white/',
-            rootMainMobile: '../../static/airport-carousel-white-mobile/',
+            rootMainMobile: '../../static/people-carousel-white-mobile/',
         }
     },
     computed: {
@@ -51,7 +51,10 @@ export default {
                 { id: '1', title: 'Sup', url: this.rootMainMobile + '4.jpg' },
                 { id: '1', title: 'Sup', url: this.rootMainMobile + '5.jpg' },
                 { id: '1', title: 'Sup', url: this.rootMainMobile + '6.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMainMobile + '7.jpg' }
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '7.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '8.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '9.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '10.jpg' }
             ];
         },
     }

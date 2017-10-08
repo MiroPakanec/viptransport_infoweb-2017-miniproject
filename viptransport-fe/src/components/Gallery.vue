@@ -49,6 +49,15 @@ export default {
                 { id: 1, url: '/static/gallery/23.jpg' },
                 { id: 1, url: '/static/gallery/24.png' },
                 { id: 1, url: '/static/gallery/25.png' },
+                { id: 1, url: '/static/gallery/26.jpg' },
+                { id: 1, url: '/static/gallery/27.jpg' },
+                { id: 1, url: '/static/gallery/28.png' },
+                { id: 1, url: '/static/gallery/29.jpg' },
+                { id: 1, url: '/static/gallery/30.jpg' },
+                { id: 1, url: '/static/gallery/31.jpg' },
+                { id: 1, url: '/static/gallery/32.jpg' },
+                { id: 1, url: '/static/gallery/33.jpg' },
+                { id: 1, url: '/static/gallery/34.jpg' }
             ]
         }
     }
