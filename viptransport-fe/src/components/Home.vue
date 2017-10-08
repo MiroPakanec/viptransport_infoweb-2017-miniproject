@@ -1,19 +1,25 @@
 <template>
   <v-container fluid class="no-padding brown--text">
     <app-carousel></app-carousel>
-    <v-layout wrap row class="mt-5 mb-5">
-      <v-flex xs1 offset-xs1 sm1 offset-sm2 md1 offset-md3>
+    <v-layout wrap row class="pt-4 pb-2 bg-darker" >
+      <!--<v-flex xs1 offset-xs1 sm1 offset-sm2 md1 offset-md3>
         <v-icon class="text-xs-right brown--text">{{ message.icon }}</v-icon>
       </v-flex>
       <v-flex xs8 sm6 md4>
-        <h6 class="text-xs-center">{{ message.text }}</h6>
+        <p class="text-xs-center message">{{ message.text }}</p>
       </v-flex>
       <v-flex xs1 sm1 offset-sm1 md1 offset-md1>
         <v-icon class="text-xs-left brown--text">{{ message.icon }}</v-icon>
+      </v-flex>-->
+      <v-flex>
+        <p class="text-xs-center message">
+          <v-icon class="brown--text">{{ message.icon }}</v-icon>
+          {{ message.text }} 
+        </p>
       </v-flex>
     </v-layout>
     <v-divider></v-divider>
-    <v-layout row class="mt-5 mb-2">
+    <v-layout row class="mt-3 mb-2">
       <v-flex xs12 text-xs-center>
         <h4 class="mb-4 mt-2">Kto je VIP Transport?</h4>
       </v-flex>
@@ -46,8 +52,8 @@ export default {
     return {
       messages: [
         {id: 1, text: 'Ku každej preprave dostane každý klient minerálnu vodu zdarma!', icon: 'local_drink' },
-        {id: 2, text: 'Message1', icon: 'local_bar' },
-        {id: 3, text: 'Message2', icon: 'local_pizza' },
+        {id: 2, text: 'U nás je možnosť platby kartou samozrejmosťou', icon: 'credit_card' },
+        {id: 3, text: 'V našich autách je vždy k dispozícii aktuálne vydanie dennej tlače', icon: 'subtitles' },
 
       ]
     }
@@ -77,5 +83,9 @@ export default {
 hr.cut {
   width: 80%;
   margin-left: 10%;
+}
+
+.message{
+  font-size: 1.6vh;
 }
 </style>

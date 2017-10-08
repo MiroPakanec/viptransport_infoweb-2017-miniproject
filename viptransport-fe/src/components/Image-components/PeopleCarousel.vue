@@ -39,7 +39,12 @@ export default {
                 { id: '1', title: 'Sup', url: this.rootMain + '7.jpg' },
                 { id: '1', title: 'Sup', url: this.rootMain + '8.jpg' },
                 { id: '1', title: 'Sup', url: this.rootMain + '9.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMain + '10.jpg' }
+                { id: '1', title: 'Sup', url: this.rootMain + '10.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMain + '11.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMain + '12.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMain + '13.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMain + '14.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMain + '15.jpg' }
 
             ];
         },
@@ -54,7 +59,12 @@ export default {
                 { id: '1', title: 'Sup', url: this.rootMainMobile + '7.jpg' },
                 { id: '1', title: 'Sup', url: this.rootMainMobile + '8.jpg' },
                 { id: '1', title: 'Sup', url: this.rootMainMobile + '9.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMainMobile + '10.jpg' }
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '10.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '11.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '12.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '13.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '14.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMainMobile + '15.jpg' }
             ];
         },
     }

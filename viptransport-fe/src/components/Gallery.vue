@@ -57,7 +57,12 @@ export default {
                 { id: 1, url: '/static/gallery/31.jpg' },
                 { id: 1, url: '/static/gallery/32.jpg' },
                 { id: 1, url: '/static/gallery/33.jpg' },
-                { id: 1, url: '/static/gallery/34.jpg' }
+                { id: 1, url: '/static/gallery/34.jpg' },
+                { id: 1, url: '/static/gallery/35.jpg' },
+                { id: 1, url: '/static/gallery/36.jpg' },
+                { id: 1, url: '/static/gallery/37.jpg' },
+                { id: 1, url: '/static/gallery/38.jpg' },
+                { id: 1, url: '/static/gallery/39.jpg' }
             ]
         }
     }

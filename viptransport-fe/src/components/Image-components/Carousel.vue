@@ -1,5 +1,5 @@
 <template>
-    <v-layout class="mb-4">
+    <v-layout class="">
         <v-flex xs12>
             <v-carousel interval="15000" v-bind:class="this.class" hide-controls>
                 <v-carousel-item v-for="image in images" :src="image.url" :key="image.id">
