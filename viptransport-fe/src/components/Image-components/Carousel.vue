@@ -1,15 +1,7 @@
 <template>
     <v-layout class="mb-4">
         <v-flex xs12>
-            <v-carousel interval="15000" v-if="this.isTablet" class="carousel-tablet" hide-controls>
-                <v-carousel-item v-for="image in imagesTablet" :src="image.url" :key="image.id">
-                </v-carousel-item>
-            </v-carousel>
-            <v-carousel interval="15000" v-else-if="this.isMobile" class="carousel-mobile" hide-controls>
-                <v-carousel-item v-for="image in imagesMobile" :src="image.url" :key="image.id">
-                </v-carousel-item>
-            </v-carousel>
-            <v-carousel interval="15000" v-else class="carousel" hide-controls>
+            <v-carousel interval="15000" v-bind:class="this.class" hide-controls>
                 <v-carousel-item v-for="image in images" :src="image.url" :key="image.id">
                 </v-carousel-item>
             </v-carousel>
@@ -22,13 +14,6 @@ var MobileDetect = require('mobile-detect');
 var md = new MobileDetect(window.navigator.userAgent);
 
 export default {
-    data: function() {
-        return {
-            rootMain: '../../static/main-carousel/b/',
-            rootMainMobile: '../../static/main-carousel-mobile/new/',
-            rootMainTablet: '../../static/main-carousel-tablet/new/'
-        }
-    },
     computed: {
         isMobile() {
             return md.mobile();
@@ -36,38 +21,23 @@ export default {
         isTablet() {
             return md.tablet();
         },
+        root() {
+            if (this.isTablet) return '../../static/main-carousel-tablet/new/';
+            if (this.isMobile) return '../../static/main-carousel-mobile/new/';
+            return '../../static/main-carousel/b/';
+        },
+        class() {
+            if (this.isTablet) return 'carousel-tablet';
+            if (this.isMobile) return 'carousel-mobile';
+            return 'carousel';
+        },
         images() {
-            let images = [
-                { id: '2', title: 'Sup', url: this.rootMain + '1.jpg' },
-                { id: '9', title: 'Sup', url: this.rootMain + '2.jpg' },
-                { id: '9', title: 'Sup', url: this.rootMain + '5.jpg' },
-                { id: '9', title: 'Sup', url: this.rootMain + '4.jpg' },
-
+            return [
+                { id: '1', title: 'Sup', url: this.root + '1.jpg' },
+                { id: '2', title: 'Sup', url: this.root + '2.jpg' },
+                { id: '3', title: 'Sup', url: this.root + '3.jpg' },
+                { id: '4', title: 'Sup', url: this.root + '4.jpg' },
             ];
-
-            return images;
-        },
-        imagesMobile() {
-
-            let images = [
-                { id: '2', title: 'Sup', url: this.rootMainMobile + '1.jpg' },
-                { id: '2', title: 'Sup', url: this.rootMainMobile + '2.jpg' },
-                { id: '2', title: 'Sup', url: this.rootMainMobile + '3.jpg' },
-                { id: '2', title: 'Sup', url: this.rootMainMobile + '4.jpg' },
-            ];
-
-            return images;
-        },
-        imagesTablet() {
-
-            let images = [
-                { id: '2', title: 'Sup', url: this.rootMainTablet + '1.jpg' },
-                { id: '2', title: 'Sup', url: this.rootMainTablet + '2.jpg' },
-                { id: '2', title: 'Sup', url: this.rootMainTablet + '3.jpg' },
-                { id: '2', title: 'Sup', url: this.rootMainTablet + '4.jpg' }
-            ];
-
-            return images;
         }
     }
 }
