@@ -56,11 +56,11 @@
             </tr>
             <tr>
                 <td colspan="2">Služby šoféra</td>
-                <td colspan="2">12 EUR/ hour</td>
+                <td colspan="2">12 €/ hour</td>
             </tr>
             <tr>
                 <td colspan="2">Čakanie</td>
-                <td colspan="2">10 EUR/ hour</td>
+                <td colspan="2">10 €/ hour</td>
             </tr>
         </tbody>
     </table>

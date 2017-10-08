@@ -24,9 +24,9 @@ var md = new MobileDetect(window.navigator.userAgent);
 export default {
     data: function() {
         return {
-            rootMain: '../../static/main-carousel/',
-            rootMainMobile: '../../static/main-carousel-mobile/',
-            rootMainMobile: '../../static/main-carousel-tablet/'
+            rootMain: '../../static/main-carousel/b/',
+            rootMainMobile: '../../static/main-carousel-mobile/new/',
+            rootMainTablet: '../../static/main-carousel-tablet/new/'
         }
     },
     computed: {
@@ -38,12 +38,11 @@ export default {
         },
         images() {
             let images = [
-                { id: '2', title: 'Sup', url: this.rootMain + '2.jpg' },
-                { id: '4', title: 'Sup', url: this.rootMain + '4.jpg' },
-                { id: '6', title: 'Sup', url: this.rootMain + '6.jpg' },
-                { id: '8', title: 'Sup', url: this.rootMain + '8.jpg' },
-                { id: '7', title: 'Sup', url: this.rootMain + '7.jpg' },
-                { id: '9', title: 'Sup', url: this.rootMain + '9.jpg' },
+                { id: '2', title: 'Sup', url: this.rootMain + '1.jpg' },
+                { id: '9', title: 'Sup', url: this.rootMain + '2.jpg' },
+                { id: '9', title: 'Sup', url: this.rootMain + '5.jpg' },
+                { id: '9', title: 'Sup', url: this.rootMain + '4.jpg' },
+
             ];
 
             return images;
@@ -62,11 +61,10 @@ export default {
         imagesTablet() {
 
             let images = [
-                { id: '2', title: 'Sup', url: this.rootMainMobile + '1.jpg' },
-                { id: '2', title: 'Sup', url: this.rootMainMobile + '2.jpg' },
-                { id: '2', title: 'Sup', url: this.rootMainMobile + '3.jpg' },
-                { id: '2', title: 'Sup', url: this.rootMainMobile + '4.jpg' },
-                { id: '2', title: 'Sup', url: this.rootMainMobile + '5.jpg' }
+                { id: '2', title: 'Sup', url: this.rootMainTablet + '1.jpg' },
+                { id: '2', title: 'Sup', url: this.rootMainTablet + '2.jpg' },
+                { id: '2', title: 'Sup', url: this.rootMainTablet + '3.jpg' },
+                { id: '2', title: 'Sup', url: this.rootMainTablet + '4.jpg' }
             ];
 
             return images;

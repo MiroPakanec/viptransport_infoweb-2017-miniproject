@@ -6,7 +6,7 @@
             </v-list>
             <v-divider></v-divider>
             <v-list subheader>
-                <v-subheader class="brown--text">Services</v-subheader>
+                <v-subheader class="brown--text">Čo ponúkame</v-subheader>
                 <v-list-tile v-for="item in services" v-bind:key="item.title" :to="item.link" @click="''">
                     <v-list-tile-action>
                         <v-icon class="brown--text">{{ item.icon }}</v-icon>
@@ -26,10 +26,8 @@
 
         <v-toolbar dark class="white height">
             <v-toolbar-side-icon @click.stop="sideNav = !sideNav" class="hidden-sm-and-up brown--text nav-header"></v-toolbar-side-icon>
-            <v-toolbar-items class="hidden-xs-only ">
-                <v-btn fab flat class="height btn-logo" to="/"></v-btn>
-            </v-toolbar-items>
             <v-toolbar-title class="nav-header">
+                <v-btn fab flat class="height btn-logo" to="/"></v-btn>
                 <router-link class="brown--text" text-xs-center to="/" tag="span" style="cursor: pointer">
                     VIP Transport
                 </router-link>

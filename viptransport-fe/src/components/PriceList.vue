@@ -11,6 +11,11 @@
                 <app-table></app-table>
             </v-flex>
         </v-layout>
+        <v-layout row class="mt-4">
+            <v-flex xs12 text-xs-center>
+                <p class="brown--text">Cenník je platný od 01.10.2017</p>
+            </v-flex>
+        </v-layout>
     </v-container>
 </template>
 
@@ -18,8 +23,8 @@
 import Table from './PriceTable/Table'
 
 export default {
-  components: {
-      'app-table' : Table
-  }
+    components: {
+        'app-table': Table
+    }
 }
 </script>
