@@ -17,7 +17,7 @@
 export default {
     data: function() {
         return {
-            rootMain: '../../static/airport-carousel-white/',
+            rootMain: '../../static/people-carousel-white/',
             rootMainMobile: '../../static/airport-carousel-white-mobile/',
         }
     },
@@ -36,7 +36,10 @@ export default {
                 { id: '1', title: 'Sup', url: this.rootMain + '4.jpg' },
                 { id: '1', title: 'Sup', url: this.rootMain + '5.jpg' },
                 { id: '1', title: 'Sup', url: this.rootMain + '6.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMain + '7.jpg' }
+                { id: '1', title: 'Sup', url: this.rootMain + '7.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMain + '8.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMain + '9.jpg' },
+                { id: '1', title: 'Sup', url: this.rootMain + '10.jpg' }
 
             ];
         },

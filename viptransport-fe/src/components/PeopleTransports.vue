@@ -11,7 +11,6 @@
             </v-flex>
         </v-layout>
         <v-divider class="mt-4 mb-5"></v-divider>
-
         <v-layout>
             <v-flex>
                 <v-list class="transparent">
@@ -33,6 +32,8 @@
                 </v-list>
             </v-flex>
         </v-layout>
+        <v-divider class="mt-4 mb-3"></v-divider>
+        <app-people-carousel class="mt-5 mb-5"></app-people-carousel>
         <v-divider class="mt-4 mb-3"></v-divider>
         </v-layout>
         <v-layout row class="mt-5">
