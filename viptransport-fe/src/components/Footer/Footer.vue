@@ -9,24 +9,29 @@
                             <v-icon class="brown--text">public</v-icon> Socialne siete</h6>
                         <p>Sledujte aktuálne dianie v našej spoločnosti.<br> Sme na
                             <a href="https://www.facebook.com/viptransport.sk/" target="blank">Facebook</a> -u.</p>
-                        <v-divider></v-divider>
+                        <v-divider v-if="isMobile"></v-divider>
+
                     </v-flex>
                     <v-flex xs12 md4 class="mt-4">
                         <h6>
                             <v-icon class="brown--text">report_problem</v-icon> Prepravný poriadok</h6>
                         <p>Prepravný poriadok spoločnosti VIP transport, s.r.o. nájdete
                             <a href="../../static/documents/prepravnyporiadok.pdf" target="blank">TU</a>.</p>
-                        <v-divider></v-divider>
+                        <v-divider v-if="isMobile"></v-divider>
+
                     </v-flex>
                     <v-flex xs12 md4 class="mt-4">
                         <h6>
                             <v-icon class="brown--text">phone</v-icon> Kontakt</h6>
-                        <p>VIP transport s.r.o. <br> Gemerská 4, 01008, Žilina<br> IČO: 46304959<br> DIČ: 2023323511<br> Mail: info@viptransport.sk<br> <a href="tel:+421 911 301 111">Tel.: +421 911 301 111</a></p>
+                        <p>VIP transport s.r.o. <br> Gemerská 4, 01008, Žilina<br> IČO: 46304959<br> DIČ: 2023323511<br> Mail: info@viptransport.sk<br>
+                            <a href="tel:+421 911 301 111">Tel.: +421 911 301 111</a>
+                        </p>
+
                     </v-flex>
                 </v-layout>
             </v-flex>
         </v-layout>
-        <v-divider class=""></v-divider>
+        <v-divider></v-divider>
         <v-layout class="pt-3">
             <v-flex xs10 offset-xs1 class="text-xs-center">
                 <p class="small">Developed by
@@ -37,6 +42,19 @@
         </v-layout>
     </v-container>
 </template>
+
+<script>
+export default {
+    computed: {
+        isMobile() {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                return true;
+            }
+            return false;
+        }
+    }
+}
+</script>
 
 <style scoped>
 h1,

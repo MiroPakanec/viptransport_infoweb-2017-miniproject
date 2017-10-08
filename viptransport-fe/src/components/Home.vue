@@ -1,7 +1,19 @@
 <template>
   <v-container fluid class="no-padding brown--text">
     <app-carousel></app-carousel>
-    <v-layout row>
+    <v-layout wrap row class="mt-5 mb-5">
+      <v-flex xs1 offset-xs1 sm1 offset-sm2 md1 offset-md3>
+        <v-icon class="text-xs-right brown--text">{{ message.icon }}</v-icon>
+      </v-flex>
+      <v-flex xs8 sm6 md4>
+        <h6 class="text-xs-center">{{ message.text }}</h6>
+      </v-flex>
+      <v-flex xs1 sm1 offset-sm1 md1 offset-md1>
+        <v-icon class="text-xs-left brown--text">{{ message.icon }}</v-icon>
+      </v-flex>
+    </v-layout>
+    <v-divider></v-divider>
+    <v-layout row class="mt-5 mb-2">
       <v-flex xs12 text-xs-center>
         <h4 class="mb-4 mt-2">Kto je VIP Transport?</h4>
       </v-flex>
@@ -27,6 +39,30 @@
 
   </v-container>
 </template>
+
+<script>
+export default {
+  data: function() {
+    return {
+      messages: [
+        {id: 1, text: 'Ku každej preprave dostane každý klient minerálnu vodu zdarma!', icon: 'local_drink' },
+        {id: 2, text: 'Message1', icon: 'local_bar' },
+        {id: 3, text: 'Message2', icon: 'local_pizza' },
+
+      ]
+    }
+  },
+  computed: {
+    message(){
+      let randomId = Math.floor(Math.random() * this.messages.length) + 1;
+      return this.messages.filter(function( message ) {
+        return message.id == randomId;
+      })[0];
+    }
+  }
+}
+</script>
+
 
 <style scoped>
 .title {
