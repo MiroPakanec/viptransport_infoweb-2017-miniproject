@@ -33,7 +33,6 @@ export default {
                 { id: 1, url: '/static/gallery/7.png' },
                 { id: 1, url: '/static/gallery/8.png' },
                 { id: 1, url: '/static/gallery/9.png' },
-                { id: 1, url: '/static/gallery/10.png' },
                 { id: 1, url: '/static/gallery/11.jpg' },
                 { id: 1, url: '/static/gallery/12.jpg' },
                 { id: 1, url: '/static/gallery/13.jpg' },

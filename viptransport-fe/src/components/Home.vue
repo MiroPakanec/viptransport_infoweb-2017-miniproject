@@ -51,9 +51,9 @@ export default {
   data: function() {
     return {
       messages: [
-        {id: 1, text: 'Ku každej preprave dostane každý klient minerálnu vodu zdarma!', icon: 'local_drink' },
-        {id: 2, text: 'U nás je možnosť platby kartou samozrejmosťou', icon: 'credit_card' },
-        {id: 3, text: 'V našich autách je vždy k dispozícii aktuálne vydanie dennej tlače', icon: 'subtitles' },
+        {id: 1, text: 'Občerstvenie v podobe nealko nápoja alebo kávy.', icon: 'local_cafe' },
+        {id: 2, text: 'U nás je možnosť platby kartou samozrejmosťou.', icon: 'credit_card' },
+        {id: 3, text: 'V našich autách je vždy k dispozícii aktuálne vydanie dennej tlače.', icon: 'subtitles' },
 
       ]
     }
@@ -86,6 +86,6 @@ hr.cut {
 }
 
 .message{
-  font-size: 1.6vh;
+  font-size: 3vh;
 }
 </style>

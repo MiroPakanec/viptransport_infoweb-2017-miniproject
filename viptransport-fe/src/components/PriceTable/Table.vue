@@ -1,5 +1,5 @@
 <template>
-    <table>
+    <table class="table-text">
         <thead>
             <tr>
                 <th rowspan="2">Z</th>
@@ -32,7 +32,7 @@
             </tr>
             <tr>
                 <td>Žilina</td>
-                <td>Bratislava</td>
+                <td>Letisko Bratislava</td>
                 <td>120</td>
                 <td>160</td>
             </tr>
@@ -56,11 +56,11 @@
             </tr>
             <tr>
                 <td colspan="2">Služby šoféra</td>
-                <td colspan="2">12 €/ hour</td>
+                <td colspan="2">12/ hodina</td>
             </tr>
             <tr>
                 <td colspan="2">Čakanie</td>
-                <td colspan="2">10 €/ hour</td>
+                <td colspan="2">10/ hodina</td>
             </tr>
         </tbody>
     </table>
@@ -86,5 +86,9 @@ table {
 th,
 td {
     border: 1px solid #917d61;
+}
+
+.table-text{
+    font-weight: bold;
 }
 </style>
