@@ -3,6 +3,7 @@ import Vuetify from 'vuetify'
 import './stylus/main.styl'
 import App from './App'
 import router from './router'
+import { store } from './store'
 
 import Carousel from './components/Image-components/Carousel'
 import WeddingCarousel from './components/Image-components/WeddingCarousel'
@@ -21,6 +22,7 @@ Vue.component('app-people-carousel', PeopleCarousel)
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })
 

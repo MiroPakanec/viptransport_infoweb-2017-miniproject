@@ -1,12 +1,12 @@
 <template>
     <table class="table-text">
         <thead>
-            <tr>
+            <tr class="dark">
                 <th rowspan="2">Z</th>
                 <th rowspan="2">Do</th>
                 <th colspan="2">Cena (€)</th>
             </tr>
-            <tr>
+            <tr class="dark">
                 <th>Auto (5)</th>
                 <th>Minibus (8)</th>
             </tr>
@@ -81,14 +81,21 @@ table {
     width: 100%;
     font-size: 2vh;
     border: 1px solid #917d61;
+    border-collapse: collapse;
+}
+
+
+.dark{
+    background-color: #f7f1e8;
 }
 
 th,
 td {
     border: 1px solid #917d61;
+    padding: 5px;
 }
 
-.table-text{
+.table-text {
     font-weight: bold;
 }
 </style>
