@@ -5,7 +5,7 @@
                 <v-card-media contain @click.native.stop="imageClicked()" style="cursor:pointer" :src="this.url" height="200px">
                 </v-card-media>
             </v-card>
-            <v-dialog width="100%" transition="fade-transition" v-model="dialog" lazy absolute>
+            <!--<v-dialog width="100%" transition="fade-transition" v-model="dialog" lazy absolute>
                 <v-card class="bg-img">
                     <v-toolbar dark class="primary white">
                         <v-btn class="btn-stan" icon @click.native="dialog = false" dark>
@@ -17,16 +17,16 @@
                         </v-btn>
                     </v-toolbar>
 
-                    <v-carousel interval="15000" v-if="this.isMobile === false" class="carousel brown--text" hide-controls>
-                        <v-carousel-item class="carousel-item" v-for="image in carouselImages" :src="image.url" :key="image.id">
+                    <v-carousel :style="maxHeight" interval="15000" v-if="this.isMobile === false && this.carouselOn" hide-controls>
+                        <v-carousel-item class="carousel-item" v-for="image in picturs" :src="image.url" :key="image.id">
                         </v-carousel-item>
                     </v-carousel>
-                    <v-carousel interval="15000" v-else class="carousel-mobile" hide-controls>
+                    <v-carousel :style="maxPhoneHeight" interval="15000" v-else class="carousel-mobile" hide-controls>
                         <v-carousel-item class="carousel-item" v-for="image in carouselImages" :src="image.url" :key="image.id">
                         </v-carousel-item>
                     </v-carousel>
                 </v-card>
-            </v-dialog>
+            </v-dialog>-->
         </v-flex>
     </v-layout>
 </template>
@@ -35,7 +35,8 @@
 export default {
     props: {
         id: {
-            required: true
+            required: true,
+            carouselOn: true
         },
         url: {
             type: String,
@@ -45,57 +46,19 @@ export default {
     data() {
         return {
             dialog: false,
-            imgStyle: {
-                maxHeight: (screen.height / 100) * 80
-            }
         }
     },
     methods: {
         imageClicked() {
-            this.dialog = true;
             this.$store.commit("orderGalleryCarouselImages", this.id);
-        }
-    },
-    computed: {
-        carouselImages() {
-            return this.$store.getters.galleryCarouselImages;
-        },
-        isMobile() {
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                return true;
-            }
-            return false;
+            this.$emit('imageClick')
         }
     }
 }
+
 </script>
 
 <style scoped>
-.full-img {
-    display: block;
-    margin: auto;
-    max-width: 100%;
-    max-height: 500px;
-}
 
-.bg-img {
-    background-color: #555555;
-}
-
-.carousel {
-
-    height: 600px;
-}
-
-.carousel-item {
-    display: block;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.carousel-mobile {
-    height: 300px;
-    width: 350px;
-}
 </style>
 
