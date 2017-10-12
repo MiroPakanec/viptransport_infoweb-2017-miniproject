@@ -43,7 +43,7 @@
         </v-layout>
         <v-layout row class="mt-4 mb-5">
             <v-flex xs10 offset-xs1 md6 offset-md3>
-                <p>Naša spoločnosť ponúka pre svojich klientov aj doplnkovú službu k službe prepravy osôb a to je služba vodiča. Pokiaľ má klient k dispozícií vlastné auto, na ktorom chce, aby sa preprava zrealizovala spoločnosť zabezpečí profesionálneho vodiča, ktorý si auto vyzdvihne na určenom mieste, na tomto aute spraví prepravu zákazníka a následne auto vráti.</p>
+                <p> Naša spoločnosť ponúka pre svojich klientov aj doplnkovú službu k službe prepravy osôb a to je služba vodiča. Ak má klient k dispozícií vlastné auto, na ktorom chce, aby sa preprava zrealizovala spoločnosť mu zabezpečí profesionálneho vodiča, ktorý si auto vyzdvihne na určenom mieste, na tomto aute spraví prepravu zákazníka a následne auto vráti. </p>
             </v-flex>
         </v-layout>
     </v-container>

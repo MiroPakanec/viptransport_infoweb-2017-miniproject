@@ -23,7 +23,7 @@
                     <v-flex xs12 md4 class="mt-4">
                         <h6>
                             <v-icon class="brown--text">phone</v-icon> Kontakt</h6>
-                        <p>VIP transport s.r.o. <br> Gemerská 4, 01008, Žilina<br> IČO: 46304959<br> DIČ: 2023323511<br> Mail: info@viptransport.sk<br>
+                        <p>VIP transport s.r.o. <br> Gemerská 4, 01008, Žilina<br> IČO: 46304959<br> DIČ: 2023323511<br> <a href="mailto:info@viptransport.sk">Mail: info@viptransport.sk</a><br>
                             <a href="tel:+421 911 301 111">Tel.: +421 911 301 111</a>
                         </p>
 

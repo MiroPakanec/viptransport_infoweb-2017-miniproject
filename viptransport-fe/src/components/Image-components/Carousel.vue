@@ -1,7 +1,7 @@
 <template>
     <v-layout class="">
         <v-flex xs12>
-            <v-carousel interval="15000" v-bind:class="this.class" hide-controls>
+            <v-carousel interval="10000" v-bind:class="this.class" hide-controls>
                 <v-carousel-item v-for="image in images" :src="image.url" :key="image.id">
                 </v-carousel-item>
             </v-carousel>
@@ -24,7 +24,7 @@ export default {
         root() {
             if (this.isTablet) return '../../static/main-carousel-tablet/new/';
             if (this.isMobile) return '../../static/main-carousel-mobile/new/';
-            return '../../static/main-carousel/b/';
+            return '../../static/main-carousel/';
         },
         class() {
             if (this.isTablet) return 'carousel-tablet';
