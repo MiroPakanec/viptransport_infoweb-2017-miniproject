@@ -2,7 +2,8 @@
     <v-container fluid class="no-padding brown--text text-xs-center">
         <v-layout row class="mt-5">
             <v-flex xs12 md4 offset-md4>
-                <h3>Kontakt</h3>
+                <h3 v-if="languageId == 1">Kontakt</h3>
+                <h3 v-else>Contact</h3>
                 <v-divider></v-divider>
             </v-flex>
         </v-layout>
@@ -14,3 +15,13 @@
         <app-carousel></app-carousel>
     </v-container>
 </template>
+
+<script>
+export default {
+  computed:{
+      languageId:{
+          get(){return this.$store.getters.selectedLanguageId;}
+      }
+  }
+}
+</script>

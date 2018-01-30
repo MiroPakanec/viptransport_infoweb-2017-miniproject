@@ -31,24 +31,24 @@ export default {
         images() {
             return [
                 { id: '1', title: 'Sup', url: this.rootMain + '1.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMain + '2.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMain + '3.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMain + '4.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMain + '5.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMain + '6.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMain + '7.jpg' }
+                { id: '2', title: 'Sup', url: this.rootMain + '2.jpg' },
+                { id: '3', title: 'Sup', url: this.rootMain + '3.jpg' },
+                { id: '4', title: 'Sup', url: this.rootMain + '4.jpg' },
+                { id: '5', title: 'Sup', url: this.rootMain + '5.jpg' },
+                { id: '6', title: 'Sup', url: this.rootMain + '6.jpg' },
+                { id: '7', title: 'Sup', url: this.rootMain + '7.jpg' }
 
             ];
         },
         imagesMobile() {
             return [
                 { id: '1', title: 'Sup', url: this.rootMainMobile + '1.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMainMobile + '2.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMainMobile + '3.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMainMobile + '4.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMainMobile + '5.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMainMobile + '6.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMainMobile + '7.jpg' }
+                { id: '2', title: 'Sup', url: this.rootMainMobile + '2.jpg' },
+                { id: '3', title: 'Sup', url: this.rootMainMobile + '3.jpg' },
+                { id: '4', title: 'Sup', url: this.rootMainMobile + '4.jpg' },
+                { id: '5', title: 'Sup', url: this.rootMainMobile + '5.jpg' },
+                { id: '6', title: 'Sup', url: this.rootMainMobile + '6.jpg' },
+                { id: '7', title: 'Sup', url: this.rootMainMobile + '7.jpg' }
             ];
         },
     }

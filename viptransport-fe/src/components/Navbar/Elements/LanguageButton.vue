@@ -41,7 +41,7 @@
                                 <v-list-tile-title class="brown--text nav-dropdown-item">{{ item.title }}</v-list-tile-title>
                             </v-flex>
                             <v-flex xs2>
-                                <v-icon v-if="item.isSelected"
+                                <v-icon v-if="item.id == selectedLanguageId"
                                         class="brown--text">check</v-icon>
                             </v-flex>
                         </v-layout>
@@ -61,16 +61,21 @@ export default {
         return this.$store.getters.languages;
       }
     },
+    selectedLanguageId: {
+      get() {
+        return this.$store.getters.selectedLanguageId;
+      }
+    },
     selectedIcon: {
       get() {
         return this.$store.getters.selectedLanguageIcon;
       }
     }
   },
-  methods:{
-      selectLanguage(languageId){
-          this.$store.dispatch('selectLanguage', languageId);
-      }
+  methods: {
+    selectLanguage(languageId) {
+      this.$store.dispatch("selectLanguage", languageId);
+    }
   }
 };
 </script>

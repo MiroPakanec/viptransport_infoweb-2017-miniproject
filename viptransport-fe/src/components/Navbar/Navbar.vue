@@ -6,8 +6,8 @@
             </v-list>
             <v-divider></v-divider>
             <v-list subheader>
-                <v-subheader class="brown--text">Čo ponúkame</v-subheader>
-                <v-list-tile v-for="item in services" v-bind:key="item.title" :to="item.link" @click="''">
+                <v-subheader class="brown--text">{{serviceTitle}}</v-subheader>
+                <v-list-tile v-for="item in services" v-bind:key="item.id" :to="item.link" @click="''">
                     <v-list-tile-action>
                         <v-icon class="brown--text">{{ item.icon }}</v-icon>
                     </v-list-tile-action>
@@ -36,7 +36,7 @@
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <v-toolbar-items class="hidden-sm-and-down">
-                <v-btn class="brown--text height" block flat to="/domov">Domov</v-btn>
+                <v-btn class="brown--text height" block flat to="/domov">{{menuItems[0].title}}</v-btn>
 
                 <v-btn class="brown--text height" flat>
                     <v-menu class="" offset-y absolute full-width>
@@ -53,7 +53,7 @@
                             </v-layout>
                         </div>
                         <v-list>
-                            <v-list-tile v-for="item in services" :key="item.title" @click="''" :to="item.link">
+                            <v-list-tile v-for="item in services" :key="item.id" @click="''" :to="item.link">
                                 <v-list-tile-title class="brown--text nav-dropdown-item">{{ item.title }}</v-list-tile-title>
                                 <v-spacer></v-spacer>
                                 <v-icon class="brown--text" left>{{ item.icon }}</v-icon>
@@ -90,26 +90,20 @@ export default {
     },
     computed: {
 
-        menuItems() {
-            let menuItems = [
-                { icon: 'home', title: 'Domov', link: '/domov', subItems: [] },
-                { icon: 'euro_symbol', title: 'Cenník', link: '/cennik', subItems: [] },
-                { icon: 'linked_camera', title: 'Galéria', link: '/galeria', subItems: [] },
-                { icon: 'local_phone', title: 'Kontakt', link: '/kontakt', subItems: [] },
-                { icon: '', title: 'Služby', link: '', subItems: this.services},
-                { icon: 'phone', title: 'Jazyk', link: '', subItems: this.services}
-            ];
-
-            return menuItems;
+        menuItems: {
+            get(){
+                return this.$store.getters.menuItems;
+            }
         },
-        services() {
-            let items = [
-                { icon: 'favorite', title: 'Svadobná preprava', link: '/svadobna-preprava' },
-                { icon: 'local_airport', title: 'Letiskové transfery', link: '/letiskove-transfery' },
-                { icon: 'directions_car', title: 'Preprava osôb', link: '/preprava-osob' }
-            ];
-
-            return items;
+        services:{
+            get(){
+                return this.$store.getters.services;
+            }
+        },
+        serviceTitle:{
+            get(){
+                return this.$store.getters.serviceTitle;
+            }
         }
     }   
 }

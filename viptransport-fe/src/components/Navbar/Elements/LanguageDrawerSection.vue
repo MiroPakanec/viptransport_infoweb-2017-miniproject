@@ -1,8 +1,8 @@
 <template>
     <v-list subheader>
-        <v-subheader class="brown--text">Zvoľte si jazyk</v-subheader>
+        <v-subheader class="brown--text">{{title}}</v-subheader>
         <v-list-tile v-for="item in languages"
-                     v-bind:key="item.title"                    
+                     v-bind:key="item.title"
                      @click="selectLanguage(item.id)">
             <v-list-tile-action>
                 <img width="20"
@@ -18,7 +18,8 @@
                             <v-list-tile-title class="brown--text">{{ item.title }}</v-list-tile-title>
                         </v-flex>
                         <v-flex xs2>
-                            <v-icon v-if="item.isSelected" class="brown--text">check</v-icon>
+                            <v-icon v-if="item.id == selectedLanguageId"
+                                    class="brown--text">check</v-icon>
                         </v-flex>
                     </v-layout>
                 </v-container>
@@ -29,21 +30,31 @@
 
 <script>
 export default {
-    computed:{
-        languages:{
-            get(){
-                return this.$store.getters.languages;
-            }
-        }
+  computed: {
+    languages: {
+      get() {
+        return this.$store.getters.languages;
+      }
     },
-    methods:{
-        selectLanguage(languageId){
-            this.$store.dispatch('selectLanguage', languageId);
-        }
+    selectedLanguageId: {
+      get() {
+        return this.$store.getters.selectedLanguageId;
+      }
+    },
+    title:{
+      get(){
+        return this.$store.getters.languageTitle;
+      }
     }
+  },
+  methods: {
+    selectLanguage(languageId) {
+      this.$store.dispatch("selectLanguage", languageId);
+    }
+  }
 };
 </script>
 
 <style>
-    
+
 </style>

@@ -3,12 +3,18 @@ import Vuex from "vuex";
 
 import Images from "./images.js";
 import Languages from "./language/index.js";
+import Navbar from "./navbar/index.js";
+import Footer from "./footer/index.js";
+import PersonalTransport from "./personalTransport/index";
 
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   modules:{
-    Languages
+    Languages,
+    Navbar,
+    Footer,
+    PersonalTransport
   },  
   state: {
     galleryImages: Images.getOrderedList(),

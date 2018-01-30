@@ -14,7 +14,8 @@
                     </v-btn>
                     <v-spacer></v-spacer>
                     <v-btn class="btn-stan" flat @click.native="dialog = false" dark>
-                        <a class="brown--text">Späť</a>
+                        <a class="brown--text" v-if="languageId == 1">Späť</a>
+                        <a class="brown--text" v-else>Back</a>
                     </v-btn>
                 </v-toolbar>
 
@@ -67,6 +68,9 @@ export default {
         maxPhoneHeight: function() {
             let maxHeight = (screen.height / 100) * 50 + "px";
             return { 'height': maxHeight };
+        },
+        languageId:{
+            get(){return this.$store.getters.selectedLanguageId;}
         }
     },
     methods: {

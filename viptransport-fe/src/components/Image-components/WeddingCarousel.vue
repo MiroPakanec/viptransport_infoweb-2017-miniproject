@@ -41,11 +41,11 @@ export default {
         imagesMobile() {
             return [
                 { id: '1', title: 'Sup', url: this.rootMainMobile + '1.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMainMobile + '2.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMainMobile + '3.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMainMobile + '4.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMainMobile + '5.jpg' },
-                { id: '1', title: 'Sup', url: this.rootMainMobile + '6.jpg' },
+                { id: '2', title: 'Sup', url: this.rootMainMobile + '2.jpg' },
+                { id: '3', title: 'Sup', url: this.rootMainMobile + '3.jpg' },
+                { id: '4', title: 'Sup', url: this.rootMainMobile + '4.jpg' },
+                { id: '5', title: 'Sup', url: this.rootMainMobile + '5.jpg' },
+                { id: '6', title: 'Sup', url: this.rootMainMobile + '6.jpg' },
             ];
         },
     }
