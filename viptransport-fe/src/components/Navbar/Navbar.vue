@@ -22,10 +22,12 @@
                 <nav-tile :item="menuItems[2]"></nav-tile>
                 <nav-tile :item="menuItems[3]"></nav-tile>
             </v-list>
+            <v-divider></v-divider>
+            <drawer-section-language></drawer-section-language>
         </v-navigation-drawer>
 
         <v-toolbar dark class="white height">
-            <v-toolbar-side-icon @click.stop="sideNav = !sideNav" class="hidden-sm-and-up brown--text nav-header"></v-toolbar-side-icon>
+            <v-toolbar-side-icon @click.stop="sideNav = !sideNav" class="hidden-md-and-up brown--text nav-header"></v-toolbar-side-icon>
             <v-toolbar-title class="nav-header">
                 <v-btn fab flat class="height btn-logo" to="/"></v-btn>
                 <router-link class="brown--text" text-xs-center to="/" tag="span" style="cursor: pointer">
@@ -33,7 +35,7 @@
                 </router-link>
             </v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-toolbar-items class="hidden-xs-only">
+            <v-toolbar-items class="hidden-sm-and-down">
                 <v-btn class="brown--text height" block flat to="/domov">Domov</v-btn>
 
                 <v-btn class="brown--text height" flat>
@@ -41,7 +43,7 @@
                         <div block class="fit" slot="activator">
                             <v-layout row>
                                 <v-flex xs12>
-                                    Služby
+                                    {{ menuItems[4].title }}
                                 </v-flex>
                             </v-layout>
                             <v-layout row>
@@ -63,6 +65,7 @@
                 <v-btn class="brown--text height" flat :to="menuItems[1].link">{{ menuItems[1].title }}</v-btn>
                 <v-btn class="brown--text height" flat :to="menuItems[2].link">{{ menuItems[2].title }}</v-btn>
                 <v-btn class="brown--text height" flat :to="menuItems[3].link">{{ menuItems[3].title }}</v-btn>
+                <nav-bnt-language></nav-bnt-language>
             </v-toolbar-items>
         </v-toolbar>
     </div>
@@ -70,12 +73,19 @@
 
 <script>
 import NavTile from './Tile';
+import NavLanguageButton from './Elements/LanguageButton';
+import DrawerLanguageSection from './Elements/LanguageDrawerSection';
 
 export default {
+    components: {
+        'nav-tile': NavTile,
+        'nav-bnt-language': NavLanguageButton,
+        'drawer-section-language': DrawerLanguageSection
+    },
     data() {
         return {
             dropdown_font: ['Arial', 'Calibri', 'Courier', 'Verdana'],
-            sideNav: false
+            sideNav: false           
         }
     },
     computed: {
@@ -86,6 +96,8 @@ export default {
                 { icon: 'euro_symbol', title: 'Cenník', link: '/cennik', subItems: [] },
                 { icon: 'linked_camera', title: 'Galéria', link: '/galeria', subItems: [] },
                 { icon: 'local_phone', title: 'Kontakt', link: '/kontakt', subItems: [] },
+                { icon: '', title: 'Služby', link: '', subItems: this.services},
+                { icon: 'phone', title: 'Jazyk', link: '', subItems: this.services}
             ];
 
             return menuItems;
@@ -99,10 +111,7 @@ export default {
 
             return items;
         }
-    },
-    components: {
-        'nav-tile': NavTile
-    }
+    }   
 }
 </script>
 

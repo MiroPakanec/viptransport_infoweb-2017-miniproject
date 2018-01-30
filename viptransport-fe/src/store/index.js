@@ -1,11 +1,15 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
-import Images from "./images.js"
+import Images from "./images.js";
+import Languages from "./language/index.js";
 
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
+  modules:{
+    Languages
+  },  
   state: {
     galleryImages: Images.getOrderedList(),
     galleryCarouselImages: Images.getOrderedList(),

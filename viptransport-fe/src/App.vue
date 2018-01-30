@@ -62,6 +62,11 @@ p {
 .no-padding {
   padding: 0;
 }
+
+.no-side-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
 </style>
 
 
